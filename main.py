@@ -115,15 +115,15 @@ if "trained" not in st.session_state:
     st.session_state.trained = False
 
 if not st.session_state.trained:
-    if st.button("▶️ Train Model"):
+    if st.button("Train Model"):
         st.session_state.trained = True
     else:
         st.info("Click **Train Model** to start training, then the app will continue.")
         st.stop()
 
-with st.spinner("⏳ Training TFT model…"):
+with st.spinner("Training TFT model…"):
     trainer.fit(model=TFTWrapper(tft), train_dataloaders=train_loader)
-st.success("✅ Training complete!")
+st.success("Training complete!")
 
 # 5) Sliding‑window iterative forecasting
 window_df = df.tail(lookback).copy().reset_index(drop=True)
