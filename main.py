@@ -181,7 +181,7 @@ for batch in test_dl:
     all_preds.extend(out.prediction.cpu().numpy().flatten())
     all_targs.extend(batch["decoder_target"].cpu().numpy().flatten())
 rmse = np.sqrt(np.mean((np.array(all_preds) - np.array(all_targs))**2))
-st.write(f"📊 **In‑sample RMSE**: {rmse:.4f}")
+st.write(f"**In‑sample RMSE**: {rmse:.4f}")
 
 # 8) GenAI Trend Summary with Mistral on HF
 st.subheader("GenAI Trend Summary")
