@@ -188,6 +188,7 @@ st.subheader("GenAI Trend Summary")
 HUGGINGFACEHUB_API_TOKEN = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 hf_llm = HuggingFaceHub(
     repo_id="mistralai/Mistral-7B-Instruct-v0.3",
+    task="text-generation",                       # ← add this
     model_kwargs={"temperature":0.7, "max_new_tokens":200},
     huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN,
 )
