@@ -39,10 +39,6 @@ This project was developed with Python 3.8+. The primary dependencies include:
 * langchain
 * huggingface-hub
 
-```
-
-> Note: exact versions depend on your environment (CUDA vs CPU). If you use GPU, install a matching `torch` binary from pytorch.org.
-
 ---
 
 ## Installation
